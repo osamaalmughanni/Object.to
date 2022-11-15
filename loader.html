@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!--- Basic Needs
+================================================== -->
+<meta charset="utf-8">
+<meta name="google" content="notranslate"/>
+<meta name="robots" content="noindex" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en" class="notranslate" translate="no"/>
+
+<title>Object</title>
+
+<!-- Basic CSS/JS
+================================================== -->
+<link rel="icon" href="http://object/kernel/img/favicon.svg" sizes="any" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script type='module' src='https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js'></script>
+<link rel="stylesheet" href="http://object/kernel/css/main.css">
+<link rel="stylesheet" href="http://object/kernel/css/loader.css">
+<script src="http://object/kernel/js/bricks.js"></script>
+<script src="http://object/kernel/js/speakingurl.min.js"></script>
+<script src="http://object/kernel/js/marked.min.js"></script>
+<script src="http://object/kernel/js/functions.js"></script>
+
+<!-- Loading
+================================================== -->
+<div class="loader" id="loader" draggable="true" ></div>
+
+<!-- Vanilla
+==================================================================================================== -->
+<script>
+let html = '';
+
+html +=`<div class="container" id="container" ondragstart="return false;">`;
+
+html +=`<div class="sidebar" id="sidebar" draggable="true"></div>`;
+
+html +=`<div class="page" id="page" onmouseover="this.parentElement.classList.add('hovered')" onmouseleave="this.parentElement.classList.remove('hovered')">`;
+html +=`<div class="header" id="header"></div>`;
+html +=`<div class="content" id="content"></div>`;
+html +=`</div>`;
+
+html +=`</div>`;
+
+document.body.innerHTML += html;
+renderSidebar();
+renderPage("");
+renderFooter();
+
+</script>
+</body>
