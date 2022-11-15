@@ -1,1 +1,416 @@
+/* =================================================================== * # Loader * * ------------------------------------------------------------------- */
+.loader {
+  position: relative;
+  border-radius: 50%;
+  box-shadow: -10px 8px 0 18px inset #000;
+  animation: rotate 2s ease-in infinite alternate;
+}
+@keyframes rotate {
+  100% { transform: rotate(750deg)}
+}
+@keyframes scale {
+ 100% { transform: scale(0.5) translateY(5px)}
+}  
+.loader {
+	transition: .3s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -32px;
+    margin-left: -32px;
+	width: 64px;
+	height: 64px;
+}
 
+/* =================================================================== * # Scrollbar * * ------------------------------------------------------------------- */
+*::-webkit-scrollbar {
+	width: 6px;
+	background-clip: padding-box;
+}
+
+*::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	color: white;
+}
+
+*::-webkit-scrollbar-track {
+	display: none;
+}
+
+*::-webkit-scrollbar-thumb {        
+  box-shadow: inset 0 0 0 10px;
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	opacity:0;
+	overflow-Y: hidden;
+	overflow-X: hidden;
+	transition: color .3s ease;
+}
+
+.container.hovered:hover::-webkit-scrollbar-thumb {
+	transition: color .3s ease;
+	color: rgba(0, 0, 0, 0.1);
+}
+
+
+/* =================================================================== * # basic/base setup styles * * ------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	line-height: initial;
+	outline: none;
+	box-sizing: content-box;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	/* iOS Safari */
+	-webkit-user-select: none;
+	/* Safari */
+	-khtml-user-select: none;
+	/* Konqueror HTML */
+	-moz-user-select: none;
+	/* Old versions of Firefox */
+	-ms-user-select: none;
+	/* Internet Explorer/Edge */
+	user-select: none;
+	/* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+html,
+body {
+	height: 100%;
+	font-family: 'Inter', serif;
+	font-weight: normal;
+	margin: 0;
+	overflow: hidden;
+}
+
+.header {
+  width: 100%;
+}
+.page {
+  grid-area: page;
+  padding: 2rem;
+}
+.sidebar {
+  grid-area: sidebar;
+    position: fixed;
+    width: 3rem;
+}
+.footer {
+  padding: 20px;
+  grid-area: footer;
+}
+.container {
+	height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: 3rem auto;	
+  grid-template-areas: 
+    "sidebar  page";
+}
+
+/* =================================================================== * # HEADER / SEARCH * * ------------------------------------------------------------------- */
+.search-container {
+	width: 9rem;
+	display: block;
+}
+
+.title {
+   display: flex;
+   align-items:center;
+	font-size: 1.6rem;
+	font-weight: 700;
+    margin: 0 0 1rem 0;
+}
+
+.description {
+	font-weight: 300;
+	margin: 0 0 1rem 0;
+	max-width: 16rem;
+}
+
+input#search-bar {
+	margin: 0 auto;
+	margin-top: 1rem;
+	width: 100%;
+	height: 50px;
+	padding: 0 2.6rem;
+	font-size: 1rem;
+	border: 2px solid #f6f6f6;
+	border-radius: 1rem;
+	outline: none;
+}
+
+input#search-bar:focus {
+	border: 2px solid #f1f1f1;
+	transition: 0.35s ease;
+	color: #666;
+}
+
+input#search-bar:focus::-webkit-input-placeholder {
+	transition: opacity 0.45s ease;
+	opacity: 0;
+}
+
+input#search-bar:focus::-moz-placeholder {
+	transition: opacity 0.45s ease;
+	opacity: 0;
+}
+
+input#search-bar:focus:-ms-placeholder {
+	transition: opacity 0.45s ease;
+	opacity: 0;
+}
+
+.search-icon {
+	position: relative;
+	width: 28px;
+	height: 28px;
+	top: -42px;
+	left: 10px;
+	opacity: .5;
+}
+
+/* =================================================================== * # SIDEBAR * * ------------------------------------------------------------------- */
+.sidebar {
+	height: 100%;
+	background-color: #f4f4f4;
+	border-radius: .6rem;
+	text-align: center;
+	z-index: 9;
+}
+
+.separator {
+	height: 6px;
+	width: 6px;
+	background-color: #e2e2e2;
+	border-radius: 50%;
+	display: inline-block;
+	margin: .6rem 0;
+}
+
+.button {
+	padding: .5rem 0;
+	width: 100%;
+	transition: .1s;
+	opacity: 1;
+}
+
+.button:active {
+	transform: scale(0.9);
+}
+
+.button img {
+    cursor: pointer;
+	height: auto;
+	width: 100%;
+	max-height: 1.6rem;
+	max-width: 1.6rem;
+}
+
+/* =================================================================== * # CONTENT / GRID * * ------------------------------------------------------------------- */
+.page {
+	transition: .3s;
+	opacity: 0;
+}
+
+.message {
+	padding: .5rem .8rem;
+    background-color: #f4f4f4;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    width: max-content;
+}
+
+.article {
+    word-break: break-word;
+	overflow-wrap: break-word;
+    width: 100%;
+}
+
+.item {
+	display: inline-block;
+	position: relative;
+	background-color: #FAFAFA;
+	border-radius: .5rem;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+	width: 100%;
+	overflow: hidden;
+	transition: transform 250ms, box-shadow 500ms;
+	opacity: 0;
+	width: 16rem;
+	word-break: break-word;
+}
+
+.sidebar-box {
+	padding-bottom: 2rem;
+	padding: 0 1rem;
+}
+
+.drag-items {
+	padding: 1rem 0 .5rem 0;
+}
+
+.drag-item {
+	display: inline-block;
+	position: relative;
+	background-color: #e7e7e7;
+	color: black;
+	font-weight: 500;
+	padding: 5px;
+	font-size: .975rem;
+	border-radius: 8px;
+	cursor: pointer;
+	margin-bottom: 4px;
+	line-height: 1;
+	transition: .1s ease-in;
+	opacity: .7;
+}
+
+.drag-item:hover {
+	opacity: 1;
+	transform: scale(1.1) translate(0, -4px);
+	z-index: 99;
+}
+
+/* =================================================================== * # SINGLE ITEM * * ------------------------------------------------------------------- */
+model-viewer {
+	min-height: 16rem;
+	width: 100%;
+	z-index: 99;
+}
+
+model-viewer {
+  --progress-bar-color: transparent;
+}
+
+video {
+	min-height: 16rem;
+	width: 100%;
+}
+
+img {
+    width: 100%;
+	height: 100%;
+}
+
+img.sidebarIcon {
+	margin-right: 12px;
+	max-height: 2rem;
+	max-width: 2rem;
+}
+
+img.close {
+    transition: .3s;
+    transition-delay: 1s;
+    width: 1.2rem;
+    margin-top: .5rem;
+}
+
+.entry-title {
+	font-size: .975rem;
+	text-align: left;
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+}
+
+.entry-meta {
+	padding: 0.8rem 1rem;
+	font-size: .775rem;
+	color: #aeaeae;
+	text-align: left;
+	background-color: #FAFAFA;
+	border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.entry-description {
+	font-size: 15px;
+	text-align: left;
+	font-weight: 400;
+	margin-top: 4px;
+}
+
+.hidden {
+    transition: .3s;
+    opacity: 0;
+}
+
+.loaded {
+    transition: .3s;
+    opacity: 1;
+}
+
+.item:hover {
+	transform: translate(0, -10px);
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.entry-name {
+	font-size: 1rem;
+	color: #565656;
+	font-weight: 600;
+}
+
+.entry-script {
+	width: 100%;
+	height: 100%;
+	transition: .3s;
+	z-index: 50;
+}
+
+.entry-play {
+	opacity: 0;
+	transition: .5s;
+	cursor: grab;
+}
+
+.item:hover .entry-play {
+	opacity: 1;
+	transform: scale(1.05);
+}
+
+.drag-item {
+	position: relative;
+	display: inline-block;
+}
+
+.drag-item .tooltiptext {
+	visibility: hidden;
+	background-color: #555;
+	color: #fff;
+	text-align: center;
+	border-radius: 8px;
+	min-width: max-content;
+	padding: 4px 6px;
+	position: absolute;
+	z-index: 1;
+	bottom: 115%;
+	left: 0%;
+	opacity: 0;
+	transition: opacity 0.3s;
+	font-size: .775rem;
+	font-weight: 400;
+	z-index: 999;
+}
+
+.drag-item:hover .tooltiptext {
+	visibility: visible;
+	opacity: 1;
+}
+
+/* =================================================================== * # FOOTER * * ------------------------------------------------------------------- */
+.footer {
+    opacity: .5;
+    padding: 0;
+    margin: 4rem 0 0 0;
+}
