@@ -1,7 +1,7 @@
 /*****************************************************************************************************************/
 
 try {
-	var domain = "https://raw.githubusercontent.com/osamaalmughanni/obtest/main/";
+	var domain = "https://cdn.jsdelivr.net/gh/osamaalmughanni/obtest/";
 	var objectURL = "http://object.local/";
 	var rawData = getData(); // function will by added by c#
 	var rawFilesList = rawData.Data.files;
