@@ -3,7 +3,7 @@
 <body>
 
 <!--- Basic Needs
-==================================================================================================== -->
+======================================================================================================================================================= -->
 <meta charset="utf-8">
 <meta name="google" content="notranslate"/>
 <meta name="robots" content="noindex" />
@@ -11,41 +11,42 @@
 <html lang="en" class="notranslate" translate="no"/>
 
 <!--- Title
-==================================================================================================== -->
+======================================================================================================================================================= -->
 <title>Object</title>
 
 <!--- Icon/Font
-==================================================================================================== -->
-<link rel="icon" href="https://cdn.jsdelivr.net/gh/osamaalmughanni/obtest/kernel/img/favicon.svg" sizes="any" type="image/svg+xml">
+======================================================================================================================================================= -->
+<link rel="icon" href="http://object/kernel/img/favicon.svg" sizes="any" type="image/svg+xml">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <!-- Model Viewer
-==================================================================================================== -->
+======================================================================================================================================================= -->
 <script type='module' src='https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js'></script>
 
 <!-- Basic JS
-==================================================================================================== -->
-<script src="https://cdn.jsdelivr.net/gh/osamaalmughanni/obtest/kernel/js/object.bricks.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/osamaalmughanni/obtest/kernel/js/object.speakingurl.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/osamaalmughanni/obtest/kernel/js/object.marked.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/osamaalmughanni/obtest/kernel/js/object.functions.js"></script>
+======================================================================================================================================================= -->
+<script src="http://object/kernel/js/object.bricks.js"></script>
+<script src="http://object/kernel/js/object.speakingurl.js"></script>
+<script src="http://object/kernel/js/object.marked.js"></script>
+<script src="http://object/kernel/js/object.functions.js"></script>
 
 <!-- Basic CSS
-==================================================================================================== -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/osamaalmughanni/obtest/kernel/css/main.css">
+======================================================================================================================================================= -->
+<link rel="stylesheet" href="http://object/kernel/css/main.css">
 
 <!-- Loading
-================================================== -->
+======================================================================================================================================================= -->
 <div class="loader" id="loader" draggable="true" ></div>
 
 <!-- Vanilla
-==================================================================================================== -->
+======================================================================================================================================================= -->
 <script>
-let html = '';
+var domain = "http://object/";
 
-html +=`<div class="container" id="container" ondragstart="return false;">`;
+let html = '';
+html +=`<div class="container" id="container"onmouseover="this.classList.add('hovered')" onmouseleave="this.classList.remove('hovered')" ondragstart="return false;">`;
 html +=`<div class="sidebar" id="sidebar" draggable="true"></div>`;
-html +=`<div class="page" id="page" onmouseover="this.parentElement.classList.add('hovered')" onmouseleave="this.parentElement.classList.remove('hovered')">`;
+html +=`<div class="page" id="page">`;
 html +=`<div class="header" id="header"></div>`;
 html +=`<div class="content" id="content"></div>`;
 html +=`</div>`;
