@@ -1,23 +1,30 @@
 /* =================================================================== * # Loader * * ------------------------------------------------------------------- */
 .loader {
-  position: relative;
-  border-radius: 50%;
-  box-shadow: -10px 8px 0 18px inset #000;
-  animation: rotate 2s ease-in infinite alternate;
+	position: relative;
+	border-radius: 50%;
+	box-shadow: -10px 8px 0 18px inset #000;
+	animation: rotate 2s ease-in infinite alternate;
 }
+
 @keyframes rotate {
-  100% { transform: rotate(750deg)}
+	100% {
+		transform: rotate(750deg)
+	}
 }
+
 @keyframes scale {
- 100% { transform: scale(0.5) translateY(5px)}
-}  
+	100% {
+		transform: scale(0.5) translateY(5px)
+	}
+}
+
 .loader {
 	transition: .3s;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -32px;
-    margin-left: -32px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -32px;
+	margin-left: -32px;
 	width: 64px;
 	height: 64px;
 }
@@ -37,24 +44,14 @@
 	display: none;
 }
 
-*::-webkit-scrollbar-thumb {        
-  box-shadow: inset 0 0 0 10px;
-}
-
-.container {
-	width: 100%;
-	height: 100%;
-	opacity:0;
-	overflow-Y: hidden;
-	overflow-X: hidden;
-	transition: color .3s ease;
+*::-webkit-scrollbar-thumb {
+	box-shadow: inset 0 0 0 10px;
 }
 
 .container.hovered:hover::-webkit-scrollbar-thumb {
 	transition: color .3s ease;
 	color: rgba(0, 0, 0, 0.1);
 }
-
 
 /* =================================================================== * # basic/base setup styles * * ------------------------------------------------------------------- */
 *,
@@ -89,31 +86,36 @@ body {
 	overflow: hidden;
 }
 
-.header {
-  width: 100%;
-}
-.page {
-  grid-area: page;
-  padding: 2rem;
-}
-.sidebar {
-  grid-area: sidebar;
-    position: fixed;
-    width: 3rem;
-}
-.footer {
-  padding: 20px;
-  grid-area: footer;
-}
 .container {
+	width: 100%;
 	height: 100%;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  display: grid;
-  grid-gap: 0;
-  grid-template-columns: 3rem auto;	
-  grid-template-areas: 
-    "sidebar  page";
+	opacity: 0;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	display: grid;
+	grid-gap: 0;
+	grid-template-columns: 3rem auto;
+	grid-template-areas: "sidebar page";
+}
+
+.header {
+	width: 100%;
+}
+
+.page {
+	grid-area: page;
+	padding: 2rem;
+}
+
+.sidebar {
+	grid-area: sidebar;
+	position: fixed;
+	width: 3rem;
+}
+
+.footer {
+	padding: 20px;
+	grid-area: footer;
 }
 
 /* =================================================================== * # HEADER / SEARCH * * ------------------------------------------------------------------- */
@@ -123,11 +125,11 @@ body {
 }
 
 .title {
-   display: flex;
-   align-items:center;
+	display: flex;
+	align-items: center;
 	font-size: 1.6rem;
 	font-weight: 700;
-    margin: 0 0 1rem 0;
+	margin: 0 0 1rem 0;
 }
 
 .description {
@@ -208,7 +210,7 @@ input#search-bar:focus:-ms-placeholder {
 }
 
 .button img {
-    cursor: pointer;
+	cursor: pointer;
 	height: auto;
 	width: 100%;
 	max-height: 1.6rem;
@@ -216,6 +218,7 @@ input#search-bar:focus:-ms-placeholder {
 }
 
 /* =================================================================== * # CONTENT / GRID * * ------------------------------------------------------------------- */
+
 .page {
 	transition: .3s;
 	opacity: 0;
@@ -223,18 +226,18 @@ input#search-bar:focus:-ms-placeholder {
 
 .message {
 	padding: .5rem .8rem;
-    background-color: #f4f4f4;
-    border-radius: 1rem;
-    margin-top: 2rem;
-    font-size: 1.1rem;
-    font-weight: 500;
-    width: max-content;
+	background-color: #f4f4f4;
+	border-radius: 1rem;
+	margin-top: 2rem;
+	font-size: 1.1rem;
+	font-weight: 500;
+	width: max-content;
 }
 
 .article {
-    word-break: break-word;
+	word-break: break-word;
 	overflow-wrap: break-word;
-    width: 100%;
+	width: 100%;
 }
 
 .item {
@@ -290,7 +293,7 @@ model-viewer {
 }
 
 model-viewer {
-  --progress-bar-color: transparent;
+	--progress-bar-color: transparent;
 }
 
 video {
@@ -299,7 +302,7 @@ video {
 }
 
 img {
-    width: 100%;
+	width: 100%;
 	height: 100%;
 }
 
@@ -310,10 +313,10 @@ img.sidebarIcon {
 }
 
 img.close {
-    transition: .3s;
-    transition-delay: 1s;
-    width: 1.2rem;
-    margin-top: .5rem;
+	transition: .3s;
+	transition-delay: 1s;
+	width: 1.2rem;
+	margin-top: .5rem;
 }
 
 .entry-title {
@@ -341,13 +344,13 @@ img.close {
 }
 
 .hidden {
-    transition: .3s;
-    opacity: 0;
+	transition: .3s;
+	opacity: 0;
 }
 
 .loaded {
-    transition: .3s;
-    opacity: 1;
+	transition: .3s;
+	opacity: 1;
 }
 
 .item:hover {
@@ -410,7 +413,7 @@ img.close {
 
 /* =================================================================== * # FOOTER * * ------------------------------------------------------------------- */
 .footer {
-    opacity: .5;
-    padding: 0;
-    margin: 4rem 0 0 0;
+	opacity: .5;
+	padding: 0;
+	margin: 4rem 0 0 0;
 }
