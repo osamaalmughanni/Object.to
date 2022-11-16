@@ -1,7 +1,5 @@
 /*****************************************************************************************************************/
-
 try {
-	var domain = "https://cdn.jsdelivr.net/gh/osamaalmughanni/obtest/";
 	var objectURL = "http://object.local/";
 	var rawData = getData(); // function will by added by c#
 	var rawFilesList = rawData.Data.files;
@@ -11,6 +9,7 @@ try {
 	var categories = data.settings.categories;
 	var filesList = data.filesList;
 } catch {
+	//window.location.href = "https://object.to";
 }
 
 /*****************************************************************************************************************/
@@ -80,7 +79,8 @@ function group(data) {
 		// fileMp4Cover
 		var fileMp4Cover = (item.map(el => getCover(el,"mp4",objectURL))).filter(Boolean);
 		if (fileMp4Cover !== null)
-			obj["fileMp4Cover"] = fileMp4Cover[0];
+			//obj["fileMp4Cover"] = fileMp4Cover[0];
+			obj["fileMp4Cover"] = null;
 
 		arr.push(obj);
 	});
@@ -366,66 +366,69 @@ function readFile(file) {
 
 function build(i) {
 	let html = '';
-		html +=`<main class="item" data-filter="${i.fileCategorySlug} ${i.fileExtensions.join(' ')}">`
-					html +=`<div class="entry-script">`;
-								html +=`<div class="entry-title">`;
-												if (i.fileGlbCover) {
-													html +=`		<model-viewer
-																		src="${i.fileGlbCover}"
-																		camera-controls
-																		shadow-intensity="1"
-																		disable-tap auto-rotate
-																		interaction-prompt="none"
-																		disable-zoom
-																		loading="lazy"
-																		onload="loadImage(this)"
-																		style="background-color: #efefef;"
-																	</model-viewer>
-													`;
-												}
-												if (i.fileImgCover && !i.fileGlbCover) {
-													html +=`
-																	<img class="entry-cover" draggable="false" src="${i.fileImgCover}" loading="lazy" onload="loadImage(this)">
-													`;
-												}
-												if (i.fileSvgCover && !i.fileGlbCover && !i.fileImgCover) {
-													html +=`
-																	<img class="entry-cover" draggable="false" src="${i.fileSvgCover}" loading="lazy" onload="loadImage(this)">
-													`;
-													}
-												if (i.fileMp4Cover && !i.fileSvgCover && !i.fileGlbCover && !i.fileImgCover) {
-													html +=`
-																	<video autoplay muted loop>
-																	  <source src="${i.fileMp4Cover}" type="video/mp4" loading="lazy" onload="loadImage(this)">
-																	</video>
-													`;
-												}
-												if (!i.fileImgCover && !i.fileGlbCover && !i.fileSvgCover && !i.fileMp4Cover) {
-													html +=`
-																	<img class="entry-cover" draggable="false" src="${domain}kernel/img/emptyCover.jpg" loading="lazy" onload="loadImage(this)">
-													`;
-												}
-								html +=`</div>`;
-									
-								html +=`<div class="entry-meta">`;
-											html +=`<div class="entry-name">${i.fileName}</div>`;
-											html +=`<div class="entry-description">${i.fileSubCategories.join(' > ')}</div>`;
+	html += `<main class="item" data-filter="${i.fileCategorySlug} ${i.fileExtensions.join(' ')}">`
+	html += `<div class="entry-script">`;
+	html += `<div class="entry-title">`;
+	if (i.fileGlbCover) {
+		html += `
+				<model-viewer
+					src="${i.fileGlbCover}"
+					camera-controls
+					shadow-intensity="1"
+					disable-tap auto-rotate
+					interaction-prompt="none"
+					disable-zoom
+					loading="lazy"
+					onload="loadImage(this)"
+					style="background-color: #efefef;"
+				</model-viewer>
+				`;
+	}
+	if (i.fileImgCover && !i.fileGlbCover) {
+		html += `
+				<img class="entry-cover" draggable="false" src="${i.fileImgCover}" loading="lazy" onload="loadImage(this)">
+				`;
+	}
+	if (i.fileSvgCover && !i.fileGlbCover && !i.fileImgCover) {
+		html += `
+				<img class="entry-cover" draggable="false" src="${i.fileSvgCover}" loading="lazy" onload="loadImage(this)">
+				`;
+	}
+	if (i.fileMp4Cover && !i.fileSvgCover && !i.fileGlbCover && !i.fileImgCover) {
+		html += `
+				<video autoplay muted loop>
+				  <source src="${i.fileMp4Cover}" type="video/mp4" loading="lazy" onload="loadImage(this)">
+				</video>
+				`;
+	}
+	if (!i.fileImgCover && !i.fileGlbCover && !i.fileSvgCover && !i.fileMp4Cover) {
+		html += `
+				<img class="entry-cover" draggable="false" src="${domain}kernel/img/emptyCover.jpg" loading="lazy" onload="loadImage(this)">
+				`;
+	}
+	html += `</div>`;
 
-											html +=`<div class="drag-items">`;
-											if ((i.filePaths).length > 0) {
-												for (const [key, value] of Object.entries(i.filePaths)) {
-														html +=`
-															<div class="drag-item" onmousedown="sendMessage('drag', '${value}')">${value.split('.').pop()}<span class="tooltiptext">${value.replace(/^.*[\\\/]/, '')}</span></div>
-														`;
-												}
-											}
-											html +=`</div>`;
+	html += `<div class="entry-meta">`;
+	html += `<div class="entry-name">${i.fileName}</div>`;
+	html += `<div class="entry-description">${i.fileSubCategories.join(' > ')}</div>`;
 
-								html +=`</div>`;
-					html +=`</div>`;
-		html +=`</main>`;
+	html += `<div class="drag-items">`;
+	if ((i.filePaths).length > 0) {
+		for (const [key, value] of Object.entries(i.filePaths)) {
+			html += `
+				<div class="drag-item" onmousedown="sendMessage('drag', '${value}')">${value.split('.').pop()}
+				<span class="tooltiptext">${value.replace(/^.*[\\\/]/, '')}</span>
+				</div>
+				`;
+		}
+	}
+	html += `</div>`;
 
-		return html;
+	html += `</div>`;
+	html += `</div>`;
+	html += `</main>`;
+
+	return html;
 }
 
 /*****************************************************************************************************************/
@@ -525,7 +528,6 @@ window.addEventListener('DOMContentLoaded', () => {
 /*****************************************************************************************************************/
 
 window.addEventListener('DOMContentLoaded', () => {
-	showElement("loader", 0);
 	document.onreadystatechange = function () {
 		if (document.readyState == "complete") {
 			hideElement("loader", 0);
