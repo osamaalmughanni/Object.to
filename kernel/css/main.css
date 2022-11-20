@@ -32,12 +32,13 @@
 /* =================================================================== * # Scrollbar * * ------------------------------------------------------------------- */
 *::-webkit-scrollbar {
 	width: 6px;
+	height: 6px;
 	background-clip: padding-box;
 }
 
 *::-webkit-scrollbar-thumb {
 	border-radius: 10px;
-	color: white;
+	color: rgba(0, 0, 0, 0);
 }
 
 *::-webkit-scrollbar-track {
@@ -48,9 +49,9 @@
 	box-shadow: inset 0 0 0 10px;
 }
 
-.container.hovered:hover::-webkit-scrollbar-thumb {
+*:hover::-webkit-scrollbar-thumb {
 	transition: color .3s ease;
-	color: rgba(0, 0, 0, 0.1);
+	color: rgba(0, 0, 0, 0.15);
 }
 
 /* =================================================================== * # basic/base setup styles * * ------------------------------------------------------------------- */
@@ -94,7 +95,7 @@ body {
 	overflow-x: hidden;
 	display: grid;
 	grid-gap: 0;
-	grid-template-columns: 3rem auto;
+	grid-template-columns: 3rem calc(100% - 3rem);
 	grid-template-areas: "sidebar page";
 }
 
@@ -247,42 +248,16 @@ input#search-bar:focus:-ms-placeholder {
 	border-radius: .5rem;
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 	width: 100%;
-	overflow: hidden;
 	transition: transform 250ms, box-shadow 500ms;
 	opacity: 0;
 	width: 16rem;
 	word-break: break-word;
+	overflow: hidden;
 }
 
 .sidebar-box {
 	padding-bottom: 2rem;
 	padding: 0 1rem;
-}
-
-.drag-items {
-	padding: 1rem 0 .5rem 0;
-}
-
-.drag-item {
-	display: inline-block;
-	position: relative;
-	background-color: #e7e7e7;
-	color: black;
-	font-weight: 500;
-	padding: 5px;
-	font-size: .975rem;
-	border-radius: 8px;
-	cursor: pointer;
-	margin-bottom: 4px;
-	line-height: 1;
-	transition: .1s ease-in;
-	opacity: .7;
-}
-
-.drag-item:hover {
-	opacity: 1;
-	transform: scale(1.1) translate(0, -4px);
-	z-index: 99;
 }
 
 /* =================================================================== * # SINGLE ITEM * * ------------------------------------------------------------------- */
@@ -299,11 +274,17 @@ model-viewer {
 video {
 	min-height: 16rem;
 	width: 100%;
+	border-radius: 8px 8px 0 0;
 }
 
 img {
 	width: 100%;
 	height: 100%;
+}
+
+.article img {
+	width: auto;
+	height: auto;
 }
 
 img.sidebarIcon {
@@ -382,33 +363,57 @@ img.close {
 	transform: scale(1.05);
 }
 
-.drag-item {
-	position: relative;
-	display: inline-block;
+.drag-items {
+	padding: 1rem 0 .5rem 0;
 }
 
-.drag-item .tooltiptext {
-	visibility: hidden;
-	background-color: #555;
-	color: #fff;
-	text-align: center;
+.drag-item {
+	display: inline-block;
+	position: relative;
+	background-color: #e7e7e7;
+	color: black;
+	font-weight: 500;
+	padding: 5px;
+	font-size: .975rem;
 	border-radius: 8px;
-	min-width: max-content;
+	cursor: pointer;
+	margin-bottom: 4px;
+	line-height: 1;
+	transition: .1s ease-in;
+	opacity: .7;
+}
+
+.drag-item:hover {
+	opacity: 1;
+	transform: scale(1.1) translate(0, -4px);
+}
+
+.tooltip-wrapper {
+	visibility: hidden;
+}
+
+.drag-item:hover .tooltip-wrapper {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip-text {
+	display: inline;
+	background: #555;
+	color: #fff;
+	font-weight: 400;
+	text-align: left;
+	border-radius: 8px;
 	padding: 4px 6px;
 	position: absolute;
-	z-index: 1;
 	bottom: 115%;
 	left: 0%;
-	opacity: 0;
+	opacity: 1;
 	transition: opacity 0.3s;
 	font-size: .775rem;
+	width: 8rem;
+	max-width: max-content;
 	font-weight: 400;
-	z-index: 999;
-}
-
-.drag-item:hover .tooltiptext {
-	visibility: visible;
-	opacity: 1;
 }
 
 /* =================================================================== * # FOOTER * * ------------------------------------------------------------------- */
