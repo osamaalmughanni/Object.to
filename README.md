@@ -39,7 +39,7 @@ const yyyymmdstr = moment().format("YYYY/MM/DD");
 const currentDate = moment().format("YYYY/MM/DD");
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[↑ back to top](#table-of-contents)**
 
 ### Use the same vocabulary for the same type of variable
 
