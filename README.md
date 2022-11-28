@@ -25,6 +25,17 @@ improvement. Beat up the code instead!
 
 ---
 
+```json
+{
+ "self": "http://martin-nally.name#",
+ "bornIn": 
+    {
+    "self": "http://www.scotland.org#",
+    "gaelicName": "Alba"
+    }
+}
+```
+
 ## **Variables**
 
 ### Use meaningful and pronounceable variable names
