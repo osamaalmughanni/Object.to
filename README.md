@@ -1,4 +1,4 @@
-# **Getting started** <!-- {docsify-ignore-all} -->
+## **Getting started**
 
 ## Introduction
 
