@@ -57,7 +57,7 @@ getCustomerRecord();
 getUser();
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[↑ back to top](#table-of-contents)**
 
 ### Use searchable names
 
