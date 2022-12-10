@@ -80,4 +80,6 @@ Yes, you can share your libraries with anyone, regardless of whether they have O
 
 Yes, when you share a library,
 
-[⬆ back to top](#table-of-contents)
+---
+
+[⬆ back to top]
