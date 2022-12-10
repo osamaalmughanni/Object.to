@@ -12,9 +12,11 @@ Overall, Object offers a practical solution to the challenges that creatives fac
 
 ### The Problem
 
-The folder structure of Object is an important aspect of the tool, as it ensures that digital assets are organized and easy to find. By requiring users to follow a specific folder structure.
+The folder structure of Object is an essential part of the tool, as it provides a clear and organized way for designers to manage and share their digital assets. By requiring users to follow a specific hierarchy of libraries, categories, and objects, Object ensures that digital assets are organized and easy to find.
 
-In the context of Object, **libraries**, **categories**, and **objects** refer to different levels of organization within a folder structure. **Libraries** are the top-level folders that contain multiple **categories**, which are subfolders that can contain both **objects** or other subcategories. This allows designers to group their digital assets into broader categories and subcategories, making it easier to find and access the files they need. For example, a library of 3D furniture models might have categories for chairs and table, which would contain the individual objects (i.e., 3D models) of different chairs or tables.
+Libraries are the top-level folders that contain multiple categories, which are subfolders that can contain both objects and other subcategories. This hierarchical structure allows designers to group their digital assets into broader categories and subcategories, making it easier to find and access the files they need. For example, a library of 3D furniture models might have categories for chairs, tables, and sofas, which would contain the individual objects (i.e., 3D models) of different furniture items.
+
+Objects are the last folders in the path and contain the specific digital assets that designers need, along with metadata files that describe the asset and its author. This allows designers to easily access the files they need and see detailed information about the asset at a glance.
 
 ### Example
 
