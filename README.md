@@ -61,7 +61,7 @@ Furniture
 In the Object folder structure, each object (i.e., a folder containing specific digital assets) must include a file called "cover" that visualizes the content of the object. This can be a simple image file, such as a JPEG or PNG, or a more complex file format such as a GLB (a 3D file format that can be used with augmented reality or virtual reality applications).
 
 # Sharing libraries
-**This section could explain how to encrypt and share libraries using Object, including how to generate and manage keys, and how to share libraries using the object.to**
+**This section could explain how to encrypt and share libraries using Object, including how to generate and manage keys, and how to share libraries online.**
 
 
 # FAQ
