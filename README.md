@@ -27,21 +27,40 @@ Sharing digital assets can also be a huge problem, as it often involves sending 
 
 ### Use the same vocabulary for the same type of variable
 
-Bad:
+library/
+├── chairs/
+|   ├── object1/
+|   |   ├── chair.ai
+|   |   ├── chair.jpg
+|   |   ├── chair.tiff
+|   |   ├── cover.jpg
+|   |   └── object.json
+|   ├── object2/
+|   |   ├── armchair.max
+|   |   ├── armchair.jpg
+|   |   ├── armchair.tiff
+|   |   ├── cover.jpg
+|   |   └── object.json
+|   ├── category.json
+|   └── icon.svg
+├── tables/
+|   ├── object3/
+|   |   ├── table.rvt
+|   |   ├── table.jpg
+|   |   ├── table.tiff
+|   |   ├── cover.jpg
+|   |   └── object.json
+|   ├── object4/
+|   |   ├── coffee_table.dwg
+|   |   ├── coffee_table.jpg
+|   |   ├── coffee_table.tiff
+|   |   ├── cover.jpg
+|   |   └── object.json
+|   ├── category.json
+|   └── icon.svg
+├── library.json
+└── cover.jpg
 
-```javascript
-getUserInfo();
-getClientData();
-getCustomerRecord();
-```
-
-Good:
-
-```javascript
-getUser();
-```
-
-[↑ back to top](#table-of-contents)
 
 ### Use searchable names
 
