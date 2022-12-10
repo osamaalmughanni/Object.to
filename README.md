@@ -17,7 +17,7 @@ Object is a digital assets content browser that makes it easy for designers to f
 }
 ```
 
-## Variables
+## Folder Structure
 
 ### The Problem
 
@@ -28,33 +28,33 @@ Sharing digital assets can also be a huge problem, as it often involves sending 
 ### Use the same vocabulary for the same type of variable
 
 ```
-library/
-├── chairs/
-|   ├── object1/
-|   |   ├── chair.ai
-|   |   ├── chair.jpg
-|   |   ├── chair.tiff
+Library/
+├── Chairs/
+|   ├── Eames Lounge Chair/
+|   |   ├── Eames Lounge Chair.ai
+|   |   ├── Eames Lounge Chair.jpg
+|   |   ├── Eames Lounge Chair.obj
 |   |   ├── cover.jpg
 |   |   └── object.json
-|   ├── object2/
-|   |   ├── armchair.max
-|   |   ├── armchair.jpg
-|   |   ├── armchair.tiff
+|   ├── Barcelona Chair/
+|   |   ├── Barcelona Chair.max
+|   |   ├── Barcelona Chair.jpg
+|   |   ├── Barcelona Chair.obj
 |   |   ├── cover.jpg
 |   |   └── object.json
 |   ├── category.json
 |   └── icon.svg
-├── tables/
-|   ├── object3/
-|   |   ├── table.rvt
-|   |   ├── table.jpg
-|   |   ├── table.tiff
+├── Tables/
+|   ├── Eames Dining Table/
+|   |   ├── Eames Dining Table.rvt
+|   |   ├── Eames Dining Table.jpg
+|   |   ├── Eames Dining Table.obj
 |   |   ├── cover.jpg
 |   |   └── object.json
-|   ├── object4/
-|   |   ├── coffee_table.dwg
-|   |   ├── coffee_table.jpg
-|   |   ├── coffee_table.tiff
+|   ├── Tulip Table/
+|   |   ├── Tulip Table.dwg
+|   |   ├── Tulip Table.jpg
+|   |   ├── Tulip Table.obj
 |   |   ├── cover.jpg
 |   |   └── object.json
 |   ├── category.json
