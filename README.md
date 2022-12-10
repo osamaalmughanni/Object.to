@@ -72,5 +72,12 @@ In the Object folder structure, each object (i.e., a folder containing specific 
 # FAQ
 **This section could provide answers to common questions and issues that users might have while using Object, along with tips and advice for getting the most out of the tool.**
 
+**Q: Can I share my libraries with people who don't have Object installed?**
+
+Yes, you can share your libraries with anyone, regardless of whether they have Object installed. They will need to download and install Object in order to access the shared library.
+
+**Q: Can I control who has access to my shared libraries?**
+
+Yes, when you share a library,
 
 [⬆ back to top](#table-of-contents)
