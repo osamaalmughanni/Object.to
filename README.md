@@ -15,7 +15,7 @@ Sharing digital assets can also be a huge problem, as it often involves sending 
 ### Use the same vocabulary for the same type of variable
 
 ```
-Library
+Furniture
 ├── Chairs
 |   ├── Eames Lounge Chair
 |   |   ├── Eames Lounge Chair.ai
