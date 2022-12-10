@@ -64,4 +64,8 @@ In the Object folder structure, each object (i.e., a folder containing specific 
 **This section could explain how to encrypt and share libraries using Object, including how to generate and manage keys, and how to share libraries using the object.to**
 
 
+# FAQ
+**This section could provide answers to common questions and issues that users might have while using Object, along with tips and advice for getting the most out of the tool.**
+
+
 [⬆ back to top](#table-of-contents)
