@@ -9,10 +9,9 @@ In order to overcome these challenges, designers need a better way to manage and
 Overall, Object offers a practical solution to the challenges that creatives face when it comes to managing and sharing digital assets. With its clear and organized folder structure, Object makes it easy for designers to find the files they need, so they can spend less time searching and more time being creative. And by allowing designers to share their libraries securely, Object enables collaboration and teamwork, so designers can work together more effectively. Whether you're a freelancer or part of a creative team, Object is the perfect tool for managing and sharing your digital assets.
 
 # Getting started
+<sub>This section could provide step-by-step instructions for setting up and using Object, including how to create libraries, add categories and objects, and share libraries with others.</sub>
 
 ## Folder Structure
-
-### The Problem
 
 The folder structure of Object is an essential part of the tool, as it provides a clear and organized way for designers to manage and share their digital assets. By requiring users to follow a specific hierarchy of libraries, categories, and objects, Object ensures that digital assets are organized and easy to find.
 
