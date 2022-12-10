@@ -2,7 +2,9 @@
 
 ## Introduction
 
-Object is a digital assets content browser that makes it easy for designers to find and access the files they need. It provides a visual representation of the files within a folder, allowing designers to quickly identify and drag and drop the files into various applications. With its ability to handle hundreds or thousands of files, Object is an efficient way for designers to streamline their workflow and save time and effort. Additionally, the ability to share encrypted libraries makes Object a versatile and secure tool for designers.
+Digital assets are an essential part of the creative process, but managing and sharing these assets can be a major challenge for designers and other creatives. When assets are not properly organized, it can be difficult for designers to find the files they need, which can waste a lot of time and disrupt their creative flow. In addition, sharing large files over email or external storage devices can be inconvenient and may not be secure. As a result, designers may struggle to collaborate effectively with others, which can hinder their ability to do their best work.
+
+In order to overcome these challenges, designers need a better way to manage and share their digital assets. This is where "Object" comes in. Object is a digital assets content browser that provides a clear and organized way to manage and share your digital assets. With Object, designers can easily visualize hundreds or thousands of files within a folder, so they can quickly find the assets they need. In addition, Object allows designers to share their libraries with others securely, so they can collaborate more effectively. Overall, Object is an efficient and effective solution for managing and sharing digital assets, making it easier for designers to do their best work.
 
 ## Folder Structure
 
