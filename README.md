@@ -12,7 +12,7 @@ Overall, Object offers a practical solution to the challenges that creatives fac
 
 ### The Problem
 
-The folder structure of Object is an important aspect of the tool, as it ensures that digital assets are organized and easy to find. By requiring users to follow a specific folder structure. In the context of Object, libraries, categories, subcategories, and objects refer to different levels of organization within a folder structure.
+The folder structure of Object is an important aspect of the tool, as it ensures that digital assets are organized and easy to find. By requiring users to follow a specific folder structure. In the context of Object, libraries, categories, and objects refer to different levels of organization within a folder structure.
 
 Libraries are the top-level folders that contain multiple categories, which are subfolders that can contain both objects and other categories. This allows designers to group their digital assets into broader categories and subcategories, making it easier to find and access the files they need. For example, a library of 3D models might have a category for furniture and a subcategory for chairs, which would contain the individual objects (i.e., 3D models) of different chairs.
 
