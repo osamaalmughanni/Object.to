@@ -27,6 +27,7 @@ Sharing digital assets can also be a huge problem, as it often involves sending 
 
 ### Use the same vocabulary for the same type of variable
 
+```
 library/
 ├── chairs/
 |   ├── object1/
@@ -60,6 +61,7 @@ library/
 |   └── icon.svg
 ├── library.json
 └── cover.jpg
+```
 
 
 ### Use searchable names
