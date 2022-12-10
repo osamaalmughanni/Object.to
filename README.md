@@ -82,4 +82,4 @@ Yes, when you share a library,
 
 ---
 
-[⬆ back to top]
+[⬆ back to top](#table-of-contents)
