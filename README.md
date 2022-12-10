@@ -1,6 +1,7 @@
 # Getting started
 
 ## Introduction
+<sub><sup>This section could provide an overview of Object, explaining what it is and how it works. It could include a brief description of the folder structure and how it enables designers to organize and share their digital assets.</sub></sup>
 
 Digital assets are an essential part of the creative process, but managing and sharing these assets can be a major challenge for designers and other creatives. When assets are not properly organized, it can be difficult for designers to find the files they need, which can waste a lot of time and disrupt their creative flow. In addition, sharing large files over email or external storage devices can be inconvenient and may not be secure. As a result, designers may struggle to collaborate effectively with others, which can hinder their ability to do their best work.
 
