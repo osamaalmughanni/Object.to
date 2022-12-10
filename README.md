@@ -4,19 +4,6 @@
 
 Object is a digital assets content browser that makes it easy for designers to find and access the files they need. It provides a visual representation of the files within a folder, allowing designers to quickly identify and drag and drop the files into various applications. With its ability to handle hundreds or thousands of files, Object is an efficient way for designers to streamline their workflow and save time and effort. Additionally, the ability to share encrypted libraries makes Object a versatile and secure tool for designers.
 
----
-
-```json
-{
- "self": "http://martin-nally.name#",
- "bornIn": 
-    {
-    "self": "http://www.scotland.org#",
-    "gaelicName": "Alba"
-    }
-}
-```
-
 ## Folder Structure
 
 ### The Problem
@@ -28,15 +15,15 @@ Sharing digital assets can also be a huge problem, as it often involves sending 
 ### Use the same vocabulary for the same type of variable
 
 ```
-Library/
-├── Chairs/
-|   ├── Eames Lounge Chair/
+Library
+├── Chairs
+|   ├── Eames Lounge Chair
 |   |   ├── Eames Lounge Chair.ai
 |   |   ├── Eames Lounge Chair.jpg
 |   |   ├── Eames Lounge Chair.obj
 |   |   ├── cover.jpg
 |   |   └── object.json
-|   ├── Barcelona Chair/
+|   ├── Barcelona Chair
 |   |   ├── Barcelona Chair.max
 |   |   ├── Barcelona Chair.jpg
 |   |   ├── Barcelona Chair.obj
@@ -44,14 +31,14 @@ Library/
 |   |   └── object.json
 |   ├── category.json
 |   └── icon.svg
-├── Tables/
-|   ├── Eames Dining Table/
+├── Tables
+|   ├── Eames Dining Table
 |   |   ├── Eames Dining Table.rvt
 |   |   ├── Eames Dining Table.jpg
 |   |   ├── Eames Dining Table.obj
 |   |   ├── cover.jpg
 |   |   └── object.json
-|   ├── Tulip Table/
+|   ├── Tulip Table
 |   |   ├── Tulip Table.dwg
 |   |   ├── Tulip Table.jpg
 |   |   ├── Tulip Table.obj
