@@ -19,21 +19,11 @@ Object is a digital assets content browser that makes it easy for designers to f
 
 ## Variables
 
-### Use meaningful and pronounceable variable names
+### The Problem
 
-Bad:
+Unorganized digital assets can be a big problem for creatives because it can make it difficult for them to find the files they need. When files are not properly organized, designers may spend a lot of time searching through various folders and subfolders to find the right asset. This can be frustrating and time-consuming, and it can hinder their ability to be productive and creative. In addition, unorganized digital assets can make it difficult for designers to collaborate with others, as it may be unclear where certain assets are located or how they should be shared.
 
-```javascript
-const yyyymmdstr = moment().format("YYYY/MM/DD");
-```
-
-Good:
-
-```javascript
-const currentDate = moment().format("YYYY/MM/DD");
-```
-
-[↑ back to top](#table-of-contents)
+Sharing digital assets can also be a huge problem, as it often involves sending large files over email or using external storage devices. This can be inconvenient and time-consuming, and it may not be secure. In addition, it can be difficult to keep track of who has access to the assets and what they are using them for. This can lead to confusion and miscommunication, and it can make it difficult for designers to work efficiently with others. Overall, unorganized digital assets and the challenges of sharing them can be major obstacles for creatives and can hinder their ability to do their best work.
 
 ### Use the same vocabulary for the same type of variable
 
