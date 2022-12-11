@@ -27,13 +27,11 @@ Furniture
 ├── Chairs
 |   ├── Eames Lounge Chair
 |   |   ├── Eames Lounge Chair.ai
-|   |   ├── Eames Lounge Chair.jpg
 |   |   ├── Eames Lounge Chair.obj
 |   |   ├── cover.jpg
 |   |   └── object.json
 |   ├── Barcelona Chair
 |   |   ├── Barcelona Chair.max
-|   |   ├── Barcelona Chair.jpg
 |   |   ├── Barcelona Chair.obj
 |   |   ├── cover.jpg
 |   |   └── object.json
@@ -42,13 +40,11 @@ Furniture
 ├── Tables
 |   ├── Eames Dining Table
 |   |   ├── Eames Dining Table.rvt
-|   |   ├── Eames Dining Table.jpg
 |   |   ├── Eames Dining Table.obj
 |   |   ├── cover.jpg
 |   |   └── object.json
 |   ├── Tulip Table
 |   |   ├── Tulip Table.dwg
-|   |   ├── Tulip Table.jpg
 |   |   ├── Tulip Table.obj
 |   |   ├── cover.jpg
 |   |   └── object.json
